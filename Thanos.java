@@ -1,3 +1,5 @@
+import java.util.TreeMap;
+
 public class Thanos {
 
     public static void main(String[] args) {
@@ -22,9 +24,22 @@ public class Thanos {
         // Captain America has a Lily
         // Doctor Strange and Black Widow have a Violet
 
+        TreeMap<Hero, Flower> party = new TreeMap<>();
+        party.put(hulk, rose);
+        party.put(thor, rose);
+        party.put(scarletWitch, rose);
+        party.put(vision, tulip);
+        party.put(captainAmerica, lily);
+        party.put(doctorStrange, violet);
+        party.put(blackWidow, violet);
+
         // TODO 2 : Print if `begonia` is contained in the TreeMap
+        System.out.println(party.containsValue(begonia));
 
         // TODO 3 : For each hero, alphabetically, print the corresponding flower
+        for (Flower flower : party.values()) {
+            System.out.println(flower.getName());
+        }
 
     }
 }
